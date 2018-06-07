@@ -9,7 +9,7 @@ ENV tomcat_url="http://apache.mirrors.pair.com/tomcat/tomcat-9/v9.0.8/bin/apache
 ENV JAVA_HOME="/usr/lib/jvm/java-1.8-openjdk"
 
 # Tools: Java JDK, Maven, and openssl
-RUN apk --update add openjdk8 maven git openssl
+RUN apk --update add openjdk8 maven git openssl openssh-client
 
 # Retrieve tomcat runtime
 RUN wget $tomcat_url -S -P /tmp/ 
